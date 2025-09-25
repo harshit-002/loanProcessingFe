@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# 🏦 Loan Processing Web App (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A loan management frontend built with **React + Vite + TypeScript**.  
+This app allows users to register, log in, apply for loans, and track the status of their loan applications.
 
-Currently, two official plugins are available:
+---
+Delployed on render: [Loan Processing](https://loan-processing-fe.onrender.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+For dummy login : 
 
-## Expanding the ESLint configuration
+```username : acc1, password : 0000```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*Note: please wait few mins for the deployed server to restart after login/register, as render stops free tier services if left idle for long.*
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🔑 Authentication
+- User registration and login
+- Secure API calls with session based authentication
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 📝 Loan Application
+- Submit new loan applications
+- Multiple applications per user
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 📊 Application Dashboard
+- View all submitted applications
+- Track credit score & application status
+- Filter & sort applications by status, date, loan amount
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ React 
+- ⚡ Vite
+- 🔷 TypeScript
+- 🎨 Tailwind CSS 
+
+---
+
+## ⚙️ Setup & Installation (Local Development)
+
+**Clone the repo**
+```sh
+gh repo clone harshit-002/loanProcessingFe
+cd loanProcessingFe
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install dependencies and run the app **(make sure you have your local [backend](https://github.com/harshit-002/Loan-Processing) already set up and running at port 8080)** : 
 ```
+npm install
+npm run dev
+```
+App will be available at 👉 http://localhost:5173 🎉
+
+
+
+
+
+
+
